@@ -8,8 +8,7 @@ module Impressionist
 
         def is_impressionable(options={})
           many(:impressions,
-          :as => :impressionable,
-          :dependent => :destroy)
+          :as => :impressionable)
 
           @impressionist_cache_options = options
         end

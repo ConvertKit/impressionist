@@ -58,13 +58,13 @@ describe Impression do
   end
 
   # tests :dependent => :destroy
-  it "should delete impressions on deletion of impressionable" do
+  it "should not delete impressions on deletion of impressionable" do
     #impressions_count = Impression.all.size
     a = Article.create
     i = a.impressions.create
     a.destroy
     a.destroyed?.should be_true
-    i.destroyed?.should be_true
+    i.destroyed?.should be_false
   end
 
 end
