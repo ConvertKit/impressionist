@@ -2,7 +2,7 @@
 # * logs an error if imps_id and imps_type can not be found
 # * asks updatable? whether it may or may not be updated
 
-class Impression < ActiveRecord::Base
+class Impression < ApplicationRecord
 
   include Impressionist::CounterCache
 
